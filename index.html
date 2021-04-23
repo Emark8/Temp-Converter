@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conversion by Mark Anunciacion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Temperature Conversion by Mark Anunciacion</h1>
+
+<article class="content">
+    <h6>&nbsp;</h6>
+    <ul>
+        <li class="inputFar">
+            <label >Fahrenheit</label>
+            <input type="text" id="faren" maxlength="4">
+        </li>
+        <li>
+            <label>Celsius</label>
+            <input readonly type="text" id="cel">
+        </li>
+    </ul>
+    <section class="entries"><h6>&nbsp;</h6>
+        <ul>
+            <li class="labels">
+                <label id="headings">Fahrenheit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Celsius</label>
+            </li>
+            <li>
+                <textarea readonly id="entries"></textarea>
+            </li>
+            <li class="buttons">
+                <button id="conv" onclick="fahrenheitToCelcius()" accesskey="c"><u>C</u>onvert</button>
+                <button id="avg" onclick="avg()" accesskey="a"><u>A</u>verage</button>
+                <button id="rst" onclick="erase()" accesskey="r"><u>R</u>eset</button>
+            </li>
+        </ul>
+    </section>
+</article>
+<script src="javascript.js"></script>
+</body>
+</html>
