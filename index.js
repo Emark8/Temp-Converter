@@ -4,16 +4,16 @@ const convert = document.querySelector('#conv');
 const average = document.querySelector('#avg');
 
 // function that limits the number of input and the type of input
-fahrenInput.onkeypress = function(e) {
+fahrenInput.onkeypress = (e) => {
 	e = e || window.event;
-	var charCode = typeof e.which == 'number' ? e.which : e.keyCode;
+	let charCode = typeof e.which == 'number' ? e.which : e.keyCode;
 
 	// allow non-printable keys
 	if (!charCode || charCode == 8) {
 		return;
 	}
 
-	var typed = String.fromCharCode(charCode);
+	let typed = String.fromCharCode(charCode);
 
 	// allow numeric characters
 	if (/\d/.test(typed)) {
@@ -39,8 +39,8 @@ function fahrenheitToCelcius() {
 
 	celsi = (Math.round(celsi * 100) / 100).toFixed(2);
 
-	var area = document.getElementById('entries');
-	var lineCount = countline();
+	let area = document.getElementById('entries');
+	let lineCount = countline();
 
 	if (lineCount < 10) {
 		celciusInput.value = celsi;
@@ -59,13 +59,13 @@ function fahrenheitToCelcius() {
 	fahrenInput.focus();
 }
 
-// function that keeps tract of the number of entries in the textarea
+// function that keeps track of the number of entries in the textarea
 function countline() {
-	var lineCount = 0;
-	var area = document.getElementById('entries');
-	var lines = area.value.split('\n');
+	let lineCount = 0;
+	let area = document.getElementById('entries');
+	let lines = area.value.split('\n');
 
-	for (var i = 0; i < lines.length; i++) {
+	for (let i = 0; i < lines.length; i++) {
 		if (lines[i].length > 0) lineCount++;
 	}
 
@@ -85,7 +85,7 @@ function avg() {
 	let lines = area.value.split('\n');
 	let numbers;
 
-	for (var i = 0; i < lines.length - 1; i++) {
+	for (let i = 0; i < lines.length - 1; i++) {
 		numbers = lines[i].split('     ');
 		faren_avg += parseFloat(numbers[0]);
 		if (numbers[1] === '') {
